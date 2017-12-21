@@ -1,0 +1,56 @@
+
+
+
+
+
+
+body {
+font-family: 'Roboto';
+}
+
+#chart {
+  width: 720px;
+  margin: 24px auto;
+}
+#apr2 {
+	margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+#apr2 h2 {
+	font-family: 'AmpleSoft-Medium';
+	font-size: 1.4rem !important;
+}
+#apr2 h4 {
+    font-family: 'AmpleSoft-Medium';
+    font-size: 2.3rem;
+    color: #67d907;
+}
+/* Styles report */
+.flex_rp {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+#report-power {
+	margin-top: 3rem;
+}
+#report-power h1 {
+	font-size: 1rem;
+	color: #37474f;
+}
+ #report-power h2 {
+   font-size: 1rem;
+   margin: 0px;
+   color: #37474f;
+}
+#report-power p {
+  margin: 0px;
+  color: #62727b;
+}
+.dbk h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
