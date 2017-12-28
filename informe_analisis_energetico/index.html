@@ -9,9 +9,10 @@
 
     <!-- Bootstrap -->
     <link href="styles/bootstrap.css" rel="stylesheet">
-    <link href="styles/c3.css" rel="stylesheet">
-    <link href="styles/popper.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/c3.css" rel="stylesheet">
+    <link href="styles/animate.css" rel="stylesheet">
+    <link href="styles/popper.css" rel="stylesheet">
     <link href="fonts.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 
@@ -28,7 +29,7 @@
 
   <div class="container">
     <!--Block one  -->
-    <section id="apr">
+    <section id="apr" class="animated flipInX">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
           <img src="resources/linkener_brand_report.svg">
@@ -37,7 +38,7 @@
           <h2>Informe de análisis energético</h2>
           <p>Périodo 01/06/2017 - 30/06/2017</p>
           <p>Escola Sanmt Gervasi - General</p>        
-          </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
           <h2>CUPS: 9655555232345896333es</h2>
           <P>calle Malvarosa 24, bajo<p>
@@ -53,19 +54,28 @@
         <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
           <h2>Importe anual</h2>
           <p>Tu importe anual ha sido superado</p>
-          <h4>12.400 €</h4>
+          <div class="ttip">
+            <!--esto es un valor dinamico-->
+            <h4>12.400 €</h4>
+          </div>
         </div>
 
         <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
           <h2>Porcentaje de ahorro</h2>
           <p>Tu porcentaje de ahorro ha sido superado</p>
-          <h4>11.5%</h4>
+          <div class="ttip">
+            <!--esto es un valor dinamico-->
+            <h4>11.5%</h4>
+          </div>
         </div>
 
         <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
           <h2>Ahorro anual estimado</h2>
           <p>Tu importe anual estimado</p>
-          <h4>2.400 €</h4>
+          <div class="ttip">
+            <!--esto es un valor dinamico-->
+            <h4>2.400 €</h4>
+          </div>
         </div>
       </div>
     
@@ -75,28 +85,76 @@
     <!--Block three -->
     <section id="apr3">
       <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 dbk">
           <div id="chart_donut"></div>
-          <h1>Importe en la factura</h1>
-          <div class="table">
+          
+
+          <div id="table_dbk">
+            <h2>Importe en la factura</h2>
+
             <div class="table_b1">
-              <p>Accion recomendada:<br />Bateria de condensadores</p>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <img src="resources/alarm_v.svg">
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                    <p>Accion recomendada:<br />Bateria de condensadores</p>
+                  </div>
+              </div>
             </div>
-            <div class="table_b2">
-              <p>Inversión 1.200€<br />
-                Retorno de la inversión<br />
-                2.15 años</p>
+
+            <div class="table_b2 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <img src="resources/cash_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Inversión 1.200€<br />
+                  Retorno de la inversión<br />
+                  2.15 años</p>
+                </div>
+              </div>
             </div>
-            <div class="table_b3">
-              <p>Ahorro anual estimado</p>
-              <p>560€</p>
+
+            <div class="table_b3 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <img src="resources/save_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Ahorro anual estimado</p>
+                  <p class="price">560€</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 dbk">
+          <div class="title_dbk dbk">
+            <h2>Energía reactiva</h2>
+            <p>Exceso de energía reactiva para el périodo seleccionado. Se recomienda instalar teleactuación para el apagado automático. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor </p>
+          </div>
+          <div class="row cent_point">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div class="point_donut">
+                <span class="circle animated infinite fadeOut"></span>
+                <h5>Consumo<br />de reactiva kVArh</h5>
+                <p>consumo de reactiva<br />representado en kVArh</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+              <div id="chart_donut_right"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div class="point_donut"> 
+                <span class="circle_mag animated infinite fadeOut"></span>
+                <h5>Exceso<br />de reactiva kVArh,€</h5>
+                <p>Exceso en el consumo de reactiva<br /> representado en €</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-          <h1>Energía reactiva</h1>
-          <p>Exceso de energía reactiva para el périodo seleccionado. Se recomienda instalar teleactuación para el apagado automático.</p>
-          <div id="chart_donut_right"></div>
         </div>
       </div>
     </section>
@@ -107,204 +165,223 @@
   <!--Block four -->
       <section id ="apr4">
       <div class="row">        
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 dbk">
           <div id="chart_donut_left1"></div>
-          <h1>Importe en la factura</h1>
-          <div class="table">
-            <div class="table_b1">
-              <p>Accion recomendada:<br />Bateria de condensadores</p>
+          <h2>Importe en la factura</h2>
+          <div id="table_dbk2">
+
+            <div class="table_b1 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <img src="resources/alarm_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Accion recomendada:<br />Bateria de condensadores</p>
+                </div>
+              </div>
             </div>
-            <div class="table_b2">
-              <p>Inversión 1.200€<br />
-                Retorno de la inversión<br />
-                2.15 años</p>
+            <div class="table_b2 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <img src="resources/cash_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Inversión 1.200€<br />
+                    Retorno de la inversión<br />
+                    2.15 años</p>
+                  </div>
+                </div>
             </div>
-            <div class="table_b3">
-              <p>Ahorro anual estimado</p>
-              <p>560€</p>
+            <div class="table_b3 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <img src="resources/save_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Ahorro anual estimado</p>
+                  <p>560€</p>
+                </div>
+              </div>
             </div>
+
+
           </div>
         </div>
 
         <div class="col-xs-12 col-sm-8 col-lg-8">
+          <div class="title_dbk dbk">
+            <h2>consumo fuera de horario</h2>
+            <p>Consumo de energía activa agregado para el périodo seleccionado, Se recomienda instalar teleactuación para apagado automático. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor</p>
+          </div>
           <div id="chart_combination"></div>
           <div id="chart_lastime"></div>
         </div>
       </div>
       </section>
   <!--End block four -->
+
+
+    <!--Block five -->
+      <section id ="apr5">
+      <div class="row">        
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 dbk">
+          <div id="chart_donut_left2"></div>
+          <h2>Importe en la factura</h2>
+          <div id="table_dbk2">
+
+            <div class="table_b1 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                    <img src="resources/alarm_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Accion recomendada:<br />Cambiar potencia contratada</p>
+                </div>
+              </div>
+            </div>
+            <div class="table_b2 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <img src="resources/cash_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Inversión: a estudiar<br />
+                    Retorno de la inversión<br />
+                    a estudiar</p>
+                  </div>
+                </div>
+            </div>
+            <div class="table_b3 hov_tab">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                  <img src="resources/save_v.svg">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                  <p>Ahorro anual estimado</p>
+                  <p>560€</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Tabla de datos -->
+          <div class="table-responsive">
+            <table id="tabreport_pc" class="table table-bordered table-hover"> 
+              <thead> 
+
+                <tr id="cell_blue"> 
+                  <th class="cell_blue_cell">Périodo</th> 
+                  <th class="cell_blue_cell">Pot. actual (kW)</th> 
+                  <th class="cell_blue_cell">Pot. propuesta (kW)</th> 
+                </tr> 
+
+              </thead> 
+
+              <tbody>
+                <tr> 
+                  <td>P1</td> 
+                  <td>23,1</td> 
+                  <td>31</td> 
+                </tr> 
+
+                <tr> 
+                  <td>P2</td> 
+                  <td>23,1</td> 
+                  <td>31</td> 
+                </tr> 
+
+                <tr> 
+                  <td>P3</td> 
+                  <td>23,1</td> 
+                  <td>9</td> 
+                </tr>
+
+                <tr> 
+                  <td>P4</td> 
+                  <td>23,1</td> 
+                  <td>31</td> 
+                </tr> 
+
+                <tr> 
+                  <td>P5</td> 
+                  <td>23,1</td> 
+                  <td>31</td> 
+                </tr>
+
+                <tr> 
+                  <td>P6</td> 
+                  <td>23,1</td> 
+                  <td>9</td> 
+                </tr>
+
+              </tbody> 
+
+            </table>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-lg-8">
+          <div class="title_dbk dbk">
+            <h2>Potencia contratada</h2>
+            <p>En los siguientes gráficos se muestra la potencia registrada por periodo, la potencia contratada y la potencia recomendada.</p>
+          </div>
+
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ctc">
+                <div class="title_dbk dbk">
+                 <h2>Comparativa de potencias en P1</h2>
+                </div>
+                <div id="chart_area"></div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="title_dbk dbk">
+                 <h2>Comparativa de potencias en P4</h2>
+                </div>
+                <div id="chart_area1"></div>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="title_dbk dbk">
+                 <h2>Comparativa de potencias en P2</h2>
+                </div>
+              <div id="chart_area2"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="title_dbk dbk">
+                 <h2>Comparativa de potencias en P5</h2>
+                </div>
+              <div id="chart_area3"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="title_dbk dbk">
+                 <h2>Comparativa de potencias en P3</h2>
+                </div>
+              <div id="chart_area4"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="title_dbk dbk">
+                 <h2>Comparativa de potencias en P6</h2>
+                </div>
+              <div id="chart_area5"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </section>
+  <!--End block five -->
     </div>
-
 </section>
-
-
-    
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery_3.2.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js"></script>
-     <script src="js/c3.js"></script>
-    <script src="js/d3.js"></script>
-
-    <script type="text/javascript">
-
-
-
-
-    //Reactive power donut left //
-    var chart = c3.generate({
-        bindto: '#chart_donut',
-        data: {
-            columns: [
-                ['data1', 30],
-                ['data2', 120],
-            ],
-            type : 'donut',
-            onclick: function (d, i) { console.log("onclick", d, i); },
-            onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-            onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-        },
-        donut: {
-            title: "10%"
-        }
-    });
-
-    setTimeout(function () {
-        chart.load({
-            columns: [
-                ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
-                ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
-                ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
-            ]
-        });
-    }, 1500);
-
-    setTimeout(function () {
-        chart.unload({
-            ids: 'data1'
-        });
-        chart.unload({
-            ids: 'data2'
-        });
-    }, 2500);
-
-
-
-    //Reactive power donut left 2
-    var chart = c3.generate({
-        bindto: '#chart_donut_left1',
-        data: {
-            columns: [
-                ['data1', 30],
-                ['data2', 120],
-            ],
-            type : 'donut',
-            onclick: function (d, i) { console.log("onclick", d, i); },
-            onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-            onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-        },
-        donut: {
-            title: "10%"
-        }
-    });
-
-    setTimeout(function () {
-        chart.load({
-            columns: [
-                ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
-                ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
-                ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
-            ]
-        });
-    }, 1500);
-
-    setTimeout(function () {
-        chart.unload({
-            ids: 'data1'
-        });
-        chart.unload({
-            ids: 'data2'
-        });
-    }, 2500);
-
-
-
-
-
-//Reactive power donut right //
-    var chart = c3.generate({
-      bindto: '#chart_donut_right',
-    data: {
-        columns: [
-            ['data1', 30],
-            ['data2', 120],
-        ],
-        type : 'donut',
-        onclick: function (d, i) { console.log("onclick", d, i); },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-    },
-    donut: {
-        title: "10%"
-    }
-});
-
-setTimeout(function () {
-    chart.load({
-        columns: [
-            ["setosa", 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.2, 0.1, 0.1, 0.2, 0.4, 0.4, 0.3, 0.3, 0.3, 0.2, 0.4, 0.2, 0.5, 0.2, 0.2, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.1, 0.2, 0.2, 0.2, 0.2, 0.1, 0.2, 0.2, 0.3, 0.3, 0.2, 0.6, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2],
-            ["versicolor", 1.4, 1.5, 1.5, 1.3, 1.5, 1.3, 1.6, 1.0, 1.3, 1.4, 1.0, 1.5, 1.0, 1.4, 1.3, 1.4, 1.5, 1.0, 1.5, 1.1, 1.8, 1.3, 1.5, 1.2, 1.3, 1.4, 1.4, 1.7, 1.5, 1.0, 1.1, 1.0, 1.2, 1.6, 1.5, 1.6, 1.5, 1.3, 1.3, 1.3, 1.2, 1.4, 1.2, 1.0, 1.3, 1.2, 1.3, 1.3, 1.1, 1.3],
-            ["virginica", 2.5, 1.9, 2.1, 1.8, 2.2, 2.1, 1.7, 1.8, 1.8, 2.5, 2.0, 1.9, 2.1, 2.0, 2.4, 2.3, 1.8, 2.2, 2.3, 1.5, 2.3, 2.0, 2.0, 1.8, 2.1, 1.8, 1.8, 1.8, 2.1, 1.6, 1.9, 2.0, 2.2, 1.5, 1.4, 2.3, 2.4, 1.8, 1.8, 2.1, 2.4, 2.3, 1.9, 2.3, 2.5, 2.3, 1.9, 2.0, 2.3, 1.8],
-        ]
-    });
-}, 1500);
-
-setTimeout(function () {
-    chart.unload({
-        ids: 'data1'
-    });
-    chart.unload({
-        ids: 'data2'
-    });
-}, 2500);
-
-
-
-    // Chart_lastime 
-    var chart = c3.generate({
-      bindto: '#chart_lastime',
-        data: {
-            columns: [
-                ['sample', 30, 200, 100, 400, 150, 250, 300, 20, 10, 180, 30, 150, 620, 150, 30,300, 380, 350,  ]
-            ]
-        },
-        regions: [
-            {start:0, end:1},
-            {start:2, end:3},
-            {start:0, end:1, class:'foo'}
-        ]
-    });
-
-    // Combination chart
-    var chart = c3.generate({
-        bindto: '#chart_combination',
-        data: {
-            columns: [
-                ['data1', 30, 20, 50, 40, 60, 50, 180, 220, 30],
-                ['data2', 200, 130, 90, 240, 130, 220, 20, 55, 30],
-
-            ],
-            type: 'bar',
-            groups: [
-                ['data1','data2']
-            ]
-        }
-    });
-
-    </script>
+<!--Libraries js -->
+  <script src="js/jquery_3.2.1.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/c3.js"></script>
+  <script src="js/d3.js"></script>
+  <script src="js/report.js"></script>
   </body>
 </html>
-Examples
