@@ -1,11 +1,9 @@
-
-
-
-
-
-
 body {
-font-family: 'Roboto';
+  font-family: 'Roboto';
+}
+p {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 #chart {
@@ -13,12 +11,16 @@ font-family: 'Roboto';
   margin: 24px auto;
 }
 #apr2 {
-	margin-top: 2rem;
-    margin-bottom: 2rem;
+  cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #f1f1f28c;
+    transition: .3s ease-in-out;
 }
 #apr2 h2 {
-	font-family: 'AmpleSoft-Medium';
-	font-size: 1.4rem !important;
+  font-family: 'AmpleSoft-Medium';
+  font-size: 1.4rem !important;
 }
 #apr2 h4 {
     font-family: 'AmpleSoft-Medium';
@@ -27,24 +29,24 @@ font-family: 'Roboto';
 }
 /* Styles report */
 .flex_rp {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 #report-power {
-	margin-top: 3rem;
+  margin-top: 3rem;
 }
 #report-power h1 {
-	font-size: 1rem;
-	color: #37474f;
+  font-size: 1rem;
+  color: #37474f;
 }
- #report-power h2 {
-   font-size: 1rem;
-   margin: 0px;
-   color: #37474f;
+#report-power h2 {
+  font-size: 1rem;
+  margin: 0px;
+  color: #000051;
 }
 #report-power p {
   margin: 0px;
@@ -54,3 +56,242 @@ font-family: 'Roboto';
   text-transform: uppercase;
   font-weight: 800;
 }
+
+
+
+
+
+#table_dbk {
+  margin-top: 2rem;
+}
+
+#table_dbk .table_b1 {
+    background-color: #53cf04;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#table_dbk .table_b1:hover {
+    box-shadow: 0px 0px 82px #53cf0673;
+    background-color: #06b206;
+}
+#table_dbk2 .hov_tab:hover {
+    box-shadow: 0px 0px 82px #53cf0673;
+    background-color: #06b206;
+}
+.hov_tab {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+#table_dbk .hov_tab:hover {
+    box-shadow: 0px 0px 82px #53cf0673;
+    background-color: #06b206;
+}
+#table_dbk .table_b1 p {
+  color: white;
+  line-height: 1.2rem;
+}
+#table_dbk .table_b2 {
+  padding: 1rem;
+  background-color: #53cf06;
+}
+#table_dbk .table_b2 p {
+  color: white;
+}
+
+
+#table_dbk .table_b3 {
+  padding: 1rem;
+  background-color: #53cf06;
+  margin-top: 0.3rem;
+}
+#table_dbk .table_b3 p {
+  color: white;
+}
+#table_dbk .table_b3 .price {
+    font-family: 'Amplesoft-medium';
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+.price_dbk {
+  color: white;
+  font-family: 'AmpleSoft-Medium';
+  font-size: 2rem;
+}
+
+
+
+
+
+
+#table_dbk2 .table_b1 {
+  background-color: #53cf04;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+#table_dbk2 .table_b1 p {
+  color: white;
+  line-height: 1.2rem;
+}
+#table_dbk2 .table_b2 {
+  background-color: #53cf06;
+  padding: 1rem;
+}
+#table_dbk2 .table_b2 p {
+  color: white;
+}
+#table_dbk2 .table_b3 {
+  padding: 1rem;
+  background-color: #53cf06;
+  margin-top: 0.3rem;
+}
+#table_dbk2 .table_b3 p {
+  color: white;
+}
+#table_dbk2 .table_b3 .price {
+  font-family: 'Amplesoft-medium';
+  font-size: 3rem;
+}
+.price_dbk {
+  color: white;
+  font-family: 'AmpleSoft-Medium';
+  font-size: 2rem;
+}
+
+
+#chart_donut .c3-chart-arcs-title {
+  font-size: 2rem;
+  font-size: 3rem;
+  font-family: 'Amplesoft-medium';
+  fill: #000051;
+}
+#chart_donut_left1 .c3-chart-arcs-title {
+  font-size: 2rem;
+  font-size: 3rem;
+  font-family: 'Amplesoft-medium';
+  fill: #000051;
+}
+#apr3 {
+  margin-bottom: 5rem;
+}
+#apr2:hover {
+    box-shadow: 0px 0px 82px #99999929;
+    border-bottom: 1px solid #53cf06;
+    background-color: white;
+}
+.title_dbk {
+    margin-bottom: 4rem;
+}
+#chart_combination .c3-xgrid-line line {
+    stroke: #53cf04;
+}
+#chart_combination .c3-ygrid line {
+    stroke: #53cf04;
+}
+#chart_combination text {
+    font-size: 0.8rem;
+    font-family: 'Roboto';
+    fill: #62727b;
+}
+#chart_lastime .c3-line-yy path {
+      stroke-width: 0.15rem !important;
+}
+#tabreport_pc th {
+  border: 1px solid rgb(83, 207, 6);
+}
+#tabreport_pc td {
+  border: 1px solid rgba(0, 0, 81, 0.56);
+}
+#tabreport_pc {
+  margin-top: 2rem;
+  text-align: center;
+}
+#cell_blue .cell_blue_cell {
+    background-color: #53cf06;
+    color: white;
+}
+#apr5 {
+  margin-top: 4rem;
+}
+#chart_donut_left2 .c3-chart-arcs-title {
+    font-size: 2rem;
+    font-size: 3rem;
+    font-family: 'Amplesoft-medium';
+    fill: #000051;
+  }
+#chart_combination .c3-tooltip {
+      border-collapse: collapse;
+    border-spacing: 0;
+    /* background-color: #cc0100; */
+    empty-cells: show;
+    -webkit-box-shadow: 0px 0px 59px -9px #01013ead;
+    -moz-box-shadow: 0px 0px 59px -9px #01013ead;
+    box-shadow: 0px 0px 30px -9px #000051;
+    opacity: 1;
+}
+#chart_combination tbody {
+      background-color: red;
+}
+#chart_combination .c3-tooltip tr {
+    background-color: #000051 !important;
+    color: white;
+    border: 1px solid #29c1ff;
+}
+#chart_combination .c3-tooltip td {
+    font-size: 14px;
+    padding: 3px 6px;
+    background-color: #000051;
+
+}
+#chart_combination .c3-tooltip td {
+    font-size: 14px;
+    padding: 3px 6px;
+
+}
+#chart_combination .c3-tooltip th {
+    background-color: #000051;
+    color: #FFF;
+}
+#chart_area, #chart_area1, #chart_area2, #chart_area3, #chart_area4, #chart_area5  {
+      margin-bottom: 2rem;
+    } 
+#chart_area, #chart_area1, #chart_area2, #chart_area3, #chart_area4, #chart_area5 text {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 0.8rem;
+  fill: #62727b;
+}
+#chart_area.c3-ygrid {
+    stroke: #91979b !important;
+}
+.cent_point {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.circle:before {
+    content: ' \25CF';
+    font-size: 31px;
+    color: #eceff1;
+}
+.circle_mag:before {
+    content: ' \25CF';
+    font-size: 31px;
+    color: #f2085e;
+}
+.point_donut h5 {
+  margin: 0px;
+  font-family: 'Roboto';
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000051;
+}
+.point_donut p {
+    line-height: 1.1rem;
+    padding-top: .3rem;
+  }
